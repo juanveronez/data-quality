@@ -1,0 +1,23 @@
+name: ci
+
+on: pull_request
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Repo
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Intall Poetry using Pip
+        run: pip install poetry
+
+      - name: Dependencies install
+        run: poetry install
+
+      - name: Run tests
+        run: poetry run task test
