@@ -1,8 +1,18 @@
-# workshop_02_aovivo
+# Data Quality
+
+O processo de qualidade de dados é importante para garantir que os dados trafegados em uma pipeline sejam confiáveis. Além disso, usando ferramentas como Pydantic e Pandera conseguimos fazer processos de validações de dados de forma mais simples.
+
+## Sobre o projeto
+
+Esse é um projeto de ETL de dados de produtos entre dois bancos, um Postgres e outro DuckDB.
+
+Todos os códigos usados no banco PostgreSQL estão disponíveis [nessa pasta de SQL](sql/).
 
 Visite minha documentacao
 
 [![Fluxo ETL](pics/codeflows.png)](https://juanveronez.github.io/data-quality/)
+
+## Veja o que eu fiz
 
 1. Clone o repositório:
 

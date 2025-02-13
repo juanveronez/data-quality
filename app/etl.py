@@ -40,7 +40,7 @@ def transform(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-@pa.check_input(ProductSchemaKPI, lazy=True)
+@pa.check_input(ProdutoSchema, lazy=True)
 def load_to_duckdb(df: pd.DataFrame, table_name: str, db_file: str = "my_duckdb.db"):
     """
     Carrega o DataFrame no DuckDB, criando ou substituindo a tabela especificada.
@@ -56,7 +56,7 @@ def load_to_duckdb(df: pd.DataFrame, table_name: str, db_file: str = "my_duckdb.
 
 
 if __name__ == "__main__":
-    q = "SELECT * FROM produtos_bronze_email"
+    q = "SELECT * FROM produtos_bronze"
     df_products = extract_db(q)
     df_products_kpi = transform(df_products)
     # pa.infer_schema(df_products).to_script("./app/product_schema.py")
