@@ -17,21 +17,21 @@ Todos os códigos usados no banco PostgreSQL estão disponíveis [nessa pasta de
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/lvgalvao/workshop_02_aovivo.git
-cd workshop_02_aovivo
+git clone https://github.com/juanveronez/data-quality.git
+cd data-quality
 ```
 
 2. Configure a versão correta do Python com `pyenv`:
 
 ```bash
-pyenv install 3.11.5
-pyenv local 3.11.5
+pyenv install 3.12.1
+pyenv local 3.12.1
 ```
 
 3. Configurar poetry para Python version 3.11.5 e ative o ambiente virtual:
 
 ```bash
-poetry env use 3.11.5
+poetry env use 3.12.1
 poetry shell
 ```
 
@@ -50,11 +50,11 @@ poetry run task test
 6. Execute o comando para ver a documentação do projeto:
 
 ```bash
-poetry run task test
+poetry run task doc
 ```
 
 7. Execute o comando de execucão da pipeline para realizar a ETL:
 
 ```bash
-poetry run python app/etl.py
+poetry run task run
 ```
