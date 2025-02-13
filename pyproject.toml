@@ -19,7 +19,11 @@ dependencies = [
     "pytest (>=8.3.4,<9.0.0)",
     "pydantic (>=2.10.6,<3.0.0)",
     "pandas (>=2.2.3,<3.0.0)",
-    "pandera[io] (>=0.22.1,<0.23.0)"
+    "pandera[io] (>=0.22.1,<0.23.0)",
+    "sqlalchemy (>=2.0.38,<3.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "duckdb (>=1.2.0,<2.0.0)"
 ]
 
 [tool.poetry]
@@ -30,7 +34,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
-test = "pytest -v"
+test = "python -m pytest -v"
 run = "python app/main.py"
 doc = "mkdocs serve"
 format = """
