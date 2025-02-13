@@ -8,7 +8,7 @@ Esse é um projeto de ETL de dados de produtos entre dois bancos, um Postgres e 
 
 Todos os códigos usados no banco PostgreSQL estão disponíveis [nessa pasta de SQL](sql/).
 
-Visite minha documentacao
+**Visite minha documentacao:**
 
 [![Fluxo ETL](pics/codeflows.png)](https://juanveronez.github.io/data-quality/)
 
