@@ -1,4 +1,8 @@
-site_name: My Docs
+site_name: Data Quality
+
+nav:
+  - Doc: index.md
+  - Pandera: pandera.md
 
 theme:
   name: material
