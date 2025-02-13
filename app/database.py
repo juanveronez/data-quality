@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
-import pandas as pd
 import os
 
 def load_settings():
@@ -30,12 +29,3 @@ def get_engine():
 
     engine = create_engine(url=connection_url)
     return engine
-    
-
-def query_from_database(query: str) -> pd.DataFrame:
-    """
-    Execute SQL Query and return Pandas Dataframe
-    """
-    engine = get_engine()
-    with engine.connect() as conn, conn.begin():
-        return pd.read_sql_query(query, conn)

@@ -12,3 +12,17 @@ graph TD;
     S -->|Falha| Z[Alerta de Erro de Saída];
     S-->|Sucesso| F[Salvar no DuckDB]
 ```
+
+## Contratos de Dados
+
+### ::: app.schemas.ProdutoSchema
+
+### ::: app.schemas.ProductSchemaKPI
+
+## Funções de ETL
+
+### ::: app.etl.extract_db
+
+### ::: app.etl.transform
+
+### ::: app.etl.load_to_duckdb
