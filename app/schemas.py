@@ -3,10 +3,11 @@ from pandera.typing import Series
 
 email_regex = r"[^@]+@[^@]+\.[^@]+"
 
+
 class ProdutoSchema(pa.DataFrameModel):
     """
     Define o esquema para a validação de dados de produtos com Pandera.
-    
+
     Este esquema inclui campos básicos para produtos, incluindo um campo de e-mail
     validado por uma expressão regular.
 
@@ -18,6 +19,7 @@ class ProdutoSchema(pa.DataFrameModel):
         categoria (Series[str]): Categoria do produto.
         email (Series[str]): E-mail associado ao produto, deve seguir o formato padrão de e-mails.
     """
+
     id_produto: Series[int]
     nome: Series[str]
     quantidade: Series[int] = pa.Field(ge=0)
@@ -29,10 +31,11 @@ class ProdutoSchema(pa.DataFrameModel):
         coerce = True
         strict = True
 
+
 class ProductSchemaKPI(ProdutoSchema):
     """
     Define o esquema para a validação de dados de produtos com Pandera.
-    
+
     Este esquema inclui campos básicos para produtos, incluindo um campo de e-mail
     validado por uma expressão regular.
 
@@ -47,6 +50,7 @@ class ProductSchemaKPI(ProdutoSchema):
         categoria_normalizada (Series[str]): Assume-se que a categoria será uma string, não precisa de check específico além de ser uma string
         disponibilidade Series[bool]: Disponibilidade é um booleano, então não precisa de check específico
     """
+
     valor_total_estoque: Series[float] = pa.Field(ge=0)
-    categoria_normalizada: Series[str] 
+    categoria_normalizada: Series[str]
     disponibilidade: Series[bool]

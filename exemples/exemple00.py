@@ -4,5 +4,5 @@ def soma(x: int, y: int) -> int:
     """
     assert isinstance(x, int)
     assert isinstance(y, int)
-    
+
     return x + y
