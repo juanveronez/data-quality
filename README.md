@@ -2,7 +2,7 @@
 
 Visite minha documentacao
 
-![[Fluxo ETL](pics/codeflows.png)](https://lvgalvao.github.io/workshop_02_aovivo/)
+[![Fluxo ETL](pics/codeflows.png)](https://juanveronez.github.io/data-quality/)
 
 1. Clone o repositório:
 
